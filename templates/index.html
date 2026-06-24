@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigQuery Release Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="glass-header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fa-solid fa-database gradient-text"></i>
+                    <h1>BigQuery <span class="gradient-text">Updates</span></h1>
+                </div>
+                <button id="refresh-btn" class="refresh-btn" title="Refresh Notes">
+                    <i class="fa-solid fa-rotate-right refresh-icon"></i>
+                    <span>Refresh</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div id="loader" class="loader-container">
+                <div class="spinner"></div>
+                <p>Fetching latest release notes...</p>
+            </div>
+            <div id="error-message" class="error-container hidden">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <p id="error-text">Failed to load data.</p>
+                <button id="retry-btn" class="retry-btn">Try Again</button>
+            </div>
+            <div id="notes-container" class="notes-container hidden">
+                <!-- Notes will be injected here -->
+            </div>
+        </main>
+        
+        <footer>
+            <p>Data fetched from official Google Cloud feeds.</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
